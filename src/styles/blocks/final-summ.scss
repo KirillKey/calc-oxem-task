@@ -1,0 +1,59 @@
+
+.order__final-summ {
+  display: flex;
+  align-items: flex-start;
+  @include notebook {
+    flex-wrap: wrap;
+  }
+}
+
+.order__final-summ__item {
+  margin-right: rem(180px);
+
+  &:nth-last-child(-n+2) {
+    margin-right: rem(0px);
+  }
+  @include notebook {
+    margin-right: rem(200px);
+    margin-bottom: rem(20px);
+  }
+  @include tablets {
+    margin-right: rem(86px);
+  }
+
+  @include phones-album {
+    margin-bottom: rem(29px);
+    &:nth-last-child(-n+2) {
+      margin-bottom: rem(0px);
+    }
+  }
+}
+
+.order__final-summ .button {
+  margin-left:  rem( 230px);
+
+  @include notebook {
+    margin-top: rem(44px);
+    margin-left: rem(0px); 
+  }
+  @include tablets {
+    margin-top: rem(26px);
+  }
+}
+
+.final-summ__title {
+  margin-bottom: rem(8px);
+  font-weight: 100;
+}
+
+.final-summ__text {
+  font-size:  rem(54px);
+  font-weight: 900;
+  line-height:  rem(48.6px);
+  white-space: nowrap;
+
+  @include phones-album {
+		font-size: rem(26px);
+		line-height: rem(20px);
+  }
+}

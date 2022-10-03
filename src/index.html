@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Калькулятор Лизинга Авто</title>
+  <meta name="description" content="Калькулятор ... дописать">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="./fonts/font.css">
+  <link rel="stylesheet" href="./main.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <section class="section order">
+      <h3 class="order__title">Рассчитайте стоимость автомобиля в лизинг</h3>
+      <div class="order__content">
+        <ul class="order__list-calc">
+          <li class="order__item-calc" data-info="input-summ-auto">
+            <div class="item-calc__title">Стоимость автомобиля</div>
+            <div class="item-calc__input">
+              <input type="text/javascript" data-info="input-summ-auto" class="input-calc" placeholder="1 000 000" />
+              <div class="item-calc--decor">₽</div>
+              <div class="input-calc-slider">
+                <input type="range" data-info="input-summ-auto" id="calc-fader" min="1000000" max="6000000" value="0" />
+              </div>
+            </div>
+          </li>
+          <li class="order__item-calc" data-info="input-first-payment">
+            <div class="item-calc__title">Первоначальный взнос</div>
+            <div class="item-calc__input">
+              <input type="text" data-info="input-first-payment" class="input-calc" placeholder="300 000" />
+              <div class="item-calc--decor item-calc--decor--percent">
+                <!-- <input type="range" data-info="input-first-payment" id="calc-fader" min="0" max="60" value="0" /> -->
+
+                60%
+              </div>
+              <div class="input-calc-slider">
+                <input type="range" data-info="input-first-payment" id="calc-fader" min="0" max="60" value="0" />
+              </div>
+            </div>
+          </li>
+          <li class="order__item-calc" data-info="input-months">
+            <div class="item-calc__title">Срок лизинга</div>
+            <div class="item-calc__input">
+              <input type="text/javascript" data-info="input-months" class=" input-calc" placeholder="60" />
+              <div class="item-calc--decor">мес.</div>
+              <div class="input-calc-slider">
+                <input type="range" data-info="input-months" id="calc-fader" min="1" max="60" value="0" />
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="order__final-summ">
+          <li class="order__final-summ__item">
+            <div class="final-summ__title">Сумма договора лизинга</div>
+            <div class="final-summ__text final-summ__text--full-summ">4 114 455 ₽</div>
+          </li>
+          <li class="order__final-summ__item">
+            <div class="final-summ__title">Ежемесячный платеж от</div>
+            <div class="final-summ__text final-summ__text--months-summ">114 455 ₽</div>
+          </li>
+          <button class="button">Оставить заявку</button>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <script src="./main.min.js"></script>
+
+</body>
+
+</html>

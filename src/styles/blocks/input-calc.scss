@@ -57,15 +57,42 @@
   width: 100%;
 }
 
-.input-calc-slider {
-  background: linear-gradient(90deg, #FF9514 100%, #E1E1E1 0%);
-  border-radius: rem(10px);
+// .input-calc-slider {
+//   background: linear-gradient(90deg, #FF9514 100%, #E1E1E1 0%);
+//   border-radius: rem(10px);
+//   position: absolute;
+//   top: 97%;
+//   left: 5.4%;
+//   width: rem(366px);
+//   width: 90%;
+//   height: rem(2px);
+  
+//   @include notebook {
+//     width: 93%;
+//     left: 3%;
+//   }
+//   @include phones-port {
+//     width: 88%;
+//     left: 6%;
+//   }
+// }
+
+input#calc-fader {
   position: absolute;
+  width: rem(366px);
+  width: 100%;
+  height: 100%;
+  
   top: 97%;
   left: 5.4%;
   width: rem(366px);
   width: 90%;
   height: rem(2px);
+  border-radius: rem(10px);
+  -webkit-appearance: none;
+  background: linear-gradient(90deg, #FF9514 100%, #E1E1E1 0%);
+  border-radius: rem(10px);
+  outline: none;
   
   @include notebook {
     width: 93%;
@@ -75,39 +102,6 @@
     width: 88%;
     left: 6%;
   }
-}
-
-input#calc-fader {
-  position: absolute;
-  width: rem(366px);
-  width: 100%;
-  height: 100%;
-  -webkit-appearance: none;
-  background: linear-gradient(90deg, #FF9514 100%, #E1E1E1 0%);
-  border-radius: rem(10px);
-  outline: none;
-  
-  // @include notebook {
-    // width: rem(900px);
-    // width: 93.6%;
-    // left: rem(34px);
-  // }
-  // @include tablets {
-  //   // left: rem(34px);
-  //   width: rem(694px);
-  //   width: 92.6%;
-  // }
-  // @include phones-album {
-  //   left: rem(36px);
-  //   width: rem(300px);
-  //   width: 88%;
-  // }
-
-  // @include phones-port {
-  //   left: rem(34px);
-  //   width: rem(300px);
-  //   width: 83%;
-  // }
 } 
 
 input#calc-fader::-webkit-slider-thumb {
@@ -190,6 +184,7 @@ input#calc-fader::-webkit-slider-thumb {
   right:  rem(24px);
 
   &--percent{
+    // display: block;
     padding:  rem( 14px)  rem( 20px);
     top:  rem( 6px);
     right:  rem( 8px);

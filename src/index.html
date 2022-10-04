@@ -25,35 +25,29 @@
           <li class="order__item-calc" data-info="input-summ-auto">
             <div class="item-calc__title">Стоимость автомобиля</div>
             <div class="item-calc__input">
-              <input type="text/javascript" data-info="input-summ-auto" class="input-calc" placeholder="1 000 000" />
+              <input type="text/javascript" data-info="input-summ-auto" class="input-calc" placeholder="1 000 000"
+                maxlength=8>
               <div class="item-calc--decor">₽</div>
-              <div class="input-calc-slider">
-                <input type="range" data-info="input-summ-auto" id="calc-fader" min="1000000" max="6000000" value="0" />
-              </div>
+              <input type="range" data-info="input-summ-auto" id="calc-fader" min="1000000" max="6000000" value="0">
             </div>
           </li>
           <li class="order__item-calc" data-info="input-first-payment">
             <div class="item-calc__title">Первоначальный взнос</div>
             <div class="item-calc__input">
-              <input type="text" data-info="input-first-payment" class="input-calc" placeholder="300 000" />
+              <input type="text" data-info="input-first-payment" class="input-calc" placeholder="300 000" maxlength=2>
               <div class="item-calc--decor item-calc--decor--percent">
-                <!-- <input type="range" data-info="input-first-payment" id="calc-fader" min="0" max="60" value="0" /> -->
-
-                60%
+                <!-- <input type="range" data-info="input-first-payment" id="calc-percent" min="0" max="60" value="0"> -->
+                0%
               </div>
-              <div class="input-calc-slider">
-                <input type="range" data-info="input-first-payment" id="calc-fader" min="0" max="60" value="0" />
-              </div>
+              <input type="range" data-info="input-first-payment" id="calc-fader" min="0" max="60" value="0">
             </div>
           </li>
           <li class="order__item-calc" data-info="input-months">
             <div class="item-calc__title">Срок лизинга</div>
             <div class="item-calc__input">
-              <input type="text/javascript" data-info="input-months" class=" input-calc" placeholder="60" />
+              <input type="text/javascript" data-info="input-months" class=" input-calc" placeholder="60" maxlength=2>
               <div class="item-calc--decor">мес.</div>
-              <div class="input-calc-slider">
-                <input type="range" data-info="input-months" id="calc-fader" min="1" max="60" value="0" />
-              </div>
+              <input type="range" data-info="input-months" id="calc-fader" min="1" max="60" value="0">
             </div>
           </li>
         </ul>
@@ -77,3 +71,8 @@
 </body>
 
 </html>
+
+<!-- УДАЛИТЬ  -->
+<!-- <div class="input-calc-slider"> -->
+<!-- <input type="range" data-info="input-months" id="calc-fader" min="1" max="60" value="0"> -->
+<!-- </div> -->

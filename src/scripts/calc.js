@@ -1,49 +1,43 @@
-const inputCalc = document.querySelector(".input-calc");
-const range = document.querySelector("#calc-fader");
-const orderItem = document.querySelector('.order__item-calc');
+const orderList = document.querySelector('.order__list-calc');
+const orderItem = document.querySelectorAll('.order__item-calc');
+const inputCalc = document.querySelectorAll(".input-calc");
+const fader = document.querySelectorAll("#calc-fader");
+const percent = document.querySelector(".item-calc--decor--percent");
 
-const summAuto = document.querySelector("[data-info=input-summ-auto]");
-const firsPayment = document.querySelector("[data-info=input-first-payment]");
-const month = document.querySelector("[data-info=input-months]");
-console.log(month.childNodes);
+const summAuto = document.querySelector("[data-info=input-summ-auto]").dataset.info;
+const firsPayment = document.querySelector("[data-info=input-first-payment]").dataset.info;
+const month = document.querySelector("[data-info=input-months]").dataset.info;
 
-// const attrs = document.querySelectorAll("[data-info]");
-const attrs = document.querySelectorAll(".order__list-calc > .order__item-calc");
+for (const currElem of orderItem) {
+  currElem.addEventListener('click', function (e) {
+    const target = e.target;
 
+    target.addEventListener('input', function (e) {
+      e.preventDefault();
+      if (target.dataset.info === currElem.dataset.info) {
+        const calcElem = currElem.querySelector(".input-calc");
+        const faderElem = currElem.querySelector("#calc-fader");
 
-for (const attr of attrs) {
-  attr.addEventListener('click', function (e) {
+        function writeNum() {
+          calcElem.value = target.value;
+          faderElem.value = calcElem.value;
+        }
 
-    e.target.addEventListener("input", function (e) {
+        if (target.dataset.info === summAuto && target.value <= 6000000) {
+          writeNum();
+        } else { }
 
-      const thisAttr = e.target.getAttribute('data-info');
-      // console.log(thisAttr);
-      console.log(thisAttr.childNodes);
+        if (target.dataset.info === firsPayment && target.value <= 60) {
+          writeNum();
+          percent.innerText = target.value + "%";
+        } else { }
 
-      // if (e.target.getAttribute('data-info') === range.getAttribute('data-info') && inputCalc.getAttribute('data-info')) {
-      if (thisAttr) {
-
-        range.value = e.target.value;
-        inputCalc.value = e.target.value;
-
+        if (target.dataset.info === month && target.value <= 60) {
+          writeNum();
+        } else { }
       }
-    });
 
-    // range.addEventListener("input", function (e) {
-    //   console.log(this.value);
-    //   inputCalc.value = this.value;
-    // });
+    })
 
   })
 }
-
-
-
-
-function calculator() { }
-
-
-
-// if (orderItem.classList.contains("active")) {
-//   orderItem.classList.remove('active');
-// } else { orderItem.classList.add('active'); }
